@@ -46,6 +46,12 @@
       color: #4a90e2;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     section {
       max-width: 800px;
       margin: 50px auto;
@@ -60,6 +66,109 @@
 
     section p {
       margin-bottom: 20px;
+    }
+
+    .highlight {
+      background-color: #ffeb3b;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .emphasis {
+      font-weight: bold;
+      color: #4a90e2;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .custom-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .custom-list li:before {
+      content: "✓";
+      color: #4a90e2;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .stats-container {
+      background: linear-gradient(135deg, #755ebf 0%, #4d2872 100%);
+      color: white;
+      padding: 10px 0;
+      margin: 20px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
     }
 
     .cta {
@@ -84,39 +193,165 @@
       padding: 30px 10px;
       margin-top: 60px;
     }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #4a90e2;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Website</h1>
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+    </div>
   </header>
 
   <nav>
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
+    <a href="#">Portfolio</a>
     <a href="#">Contact</a>
   </nav>
 
   <section>
     <h2>About Me</h2>
-    <p>
-      I’m a passionate web designer creating fast, accessible websites using only HTML and CSS.
-    </p>
-    <a href="#" class="cta">Learn More</a>
+    <div class="about-content">
+      <p>
+        I'm a passionate web designer creating fast, accessible websites using modern technologies. 
+        My focus is on <span class="emphasis">clean code</span> and <span class="highlight">user experience</span>.
+      </p>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend Skills</h3>
+          <ul class="custom-list">
+            <li>HTML5 & Semantic Markup</li>
+            <li>CSS3 & Modern Layouts</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        
+        <div class="skill-card">
+          <h3>Design Principles</h3>
+          <ul>
+            <li>User-Centered Design</li>
+            <li>Accessibility Standards</li>
+            <li>Performance Optimization</li>
+          </ul>
+        </div>
+      </div>
+      
+      <a href="#" class="cta">Learn More</a>
+    </div>
   </section>
 
+  <div class="stats-container">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span>Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">0</span>
+          <span>Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span>Client Satisfaction</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span>Support Available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section>
-    <h2>My Work</h2>
-    <p>
-      I focus on elegant layouts, responsive designs, and a user-friendly experience without overcomplicating things.
-    </p>
-    <a href="#" class="cta">See Projects</a>
+    <h2>My Work & Services</h2>
+    <div class="work-content">
+      <p>
+        I focus on elegant layouts, responsive designs, and a user-friendly experience without overcomplicating things.
+        Here's a breakdown of my <span class="emphasis">service offerings</span>:
+      </p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Timeline</th>
+            <th>Price Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="emphasis">Website Design</span></td>
+            <td>Custom responsive websites tailored to your needs</td>
+            <td>2-4 weeks</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="emphasis">Landing Pages</span></td>
+            <td>High-converting single-page designs</td>
+            <td>1-2 weeks</td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td><span class="emphasis">Maintenance</span></td>
+            <td>Ongoing updates and technical support</td>
+            <td>Monthly</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="process-section">
+        <h3>My Design Process</h3>
+        <ul>
+          <li><span class="emphasis">Planning:</span> Creating wireframes and project timeline</li>
+          <li><span class="emphasis">Development:</span> Building with clean, semantic code</li>
+          <li><span class="emphasis">Launch:</span> Deployment and final optimization</li>
+        </ul>
+      </div>
+      
+      <a href="#" class="cta">See Projects</a>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Farea. All rights reserved.
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <span>&copy; 2025 <span class="emphasis">Farea</span>. All rights reserved.</span>
+        </div>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">Twitter</a>
+          <a href="#">Portfolio</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
