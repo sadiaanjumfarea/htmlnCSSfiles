@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoe Cart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      padding: 1rem;
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .product-card button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shoe Store</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="product-card">
+      <img src="96433A29_1.jpeg" alt="Running Shoe">
+      <h2>Running Shoe</h2>
+      <p>$49.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="1_7811ab7c-0f02-4dc0-8d35-9bddef542756_1024x1024.webp" alt="Casual Shoe">
+      <h2>Casual Shoe</h2>
+      <p>$39.99</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="7585f446-dbc1-49b4-b516-76b6212de90c.jpeg" alt="Sneakers">
+      <h2>Sneakers</h2>
+      <p>$59.99</p>
+      <button>Add to Cart</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shoe Store</p>
+  </footer>
+
+</body>
+</html>
